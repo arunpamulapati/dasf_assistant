@@ -19,7 +19,7 @@
 * **Step 6:** Create a new Genie Space ([AWS](https://docs.databricks.com/en/genie/index.html#create-a-new-genie-space), [Azure](https://learn.microsoft.com/en-us/azure/databricks/genie/#create-a-new-genie-space), [GCP](https://docs.gcp.databricks.com/en/genie/index.html#create-a-new-genie-space)):
     * _Copy and paste the [instructions.txt](resources/instructions.txt) into the General Instructions field_
     * _Select the SQL tables and functions created automatically by the [setup.py](notebooks/setup.py) notebook via the Add SQL Functions button_
-*  **Step 7:** Make a wish!
+*  **Step 7:** Ask me away!
    * _You can find some examples of the kinds of questions you can ask in the [questions.txt](resources/questions.txt) file provided!_
 
 ## Examples
