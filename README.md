@@ -33,6 +33,4 @@
 | Get details of risk Data poisoning |  Found a function that might match your question: `risks_in_ai_system_component_by_risk_name` | ![image](./docs/images/dasf_assistant_5.png) |
 | List mitigation controls and AWS documentation links for the risk id Datasets 3.1|  Found a function that might match your question: `databricks_ai_mitigation_controls_by_risk_id` | ![image](./docs/images/dasf_assistant_6.png) |
 | Just limit the above out put to mitigation control id, conrol and aws documentation link|  This query retrieves the mitigation control ID, control description, and AWS documentation link for the mitigation controls associated with the risk ID `Datasets 3.1`. It combines information from the `databricks_ai_mitigation_controls` table and the `risks_and_controls_mapping` table to identify the relevant mitigation controls and their details. | ![image](./docs/images/dasf_assistant_7.png) |
-| What other risks are covered by the mitigation control DASF 1?|  Found a function that might match your question:`risks_in_ai_system_by_mitigation_controls_id` 
- | ![image](./docs/images/dasf_assistant_8.png) |
-
+| What other risks are covered by the mitigation control DASF 1?|  Found a function that might match your question:`risks_in_ai_system_by_mitigation_controls_id` | ![image](./docs/images/dasf_assistant_8.png) |
