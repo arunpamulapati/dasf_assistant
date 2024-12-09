@@ -8,6 +8,8 @@
 
 # MAGIC %md
 # MAGIC #Environment setup
+# MAGIC
+# MAGIC ### TODO: Run the cell below by itself first
 
 # COMMAND ----------
 
@@ -16,6 +18,12 @@ dbutils.widgets.dropdown(name="catalog", defaultValue=catalogs[0], choices=catal
 dbutils.widgets.text(name="schema", defaultValue="dasf", label="schema")
 dbutils.widgets.text(name="volume", defaultValue="dasf", label="volume")
 
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Stop and select the catalog from the pulldown above and fill schema name and volume fields
+# MAGIC ### After providing the proper inputs you can run all of the cells below
 
 # COMMAND ----------
 
@@ -30,7 +38,6 @@ volume = dbutils.widgets.get("volume")
 sql(f"CREATE SCHEMA IF NOT EXISTS {catalog}.{schema}")
 sql(f"CREATE VOLUME IF NOT EXISTS {catalog}.{schema}.{volume}")
 volume_path = f"/Volumes/{catalog}/{schema}/{volume}"
-#volume_path = "../resources/"
 
 sql(f"USE CATALOG {catalog}")
 sql(f"USE SCHEMA {schema}")
@@ -51,6 +58,8 @@ for filename in os.listdir(source_folder):
     if filename.endswith(".tsv"):
         source_file = os.path.join(source_folder, filename)
         destination_file = os.path.join(destination_folder, filename)
+        if os.path.isfile(destination_file):
+            os.remove(destination_file)
         if os.path.isfile(source_file):
             shutil.copy(source_file, destination_file)
 
