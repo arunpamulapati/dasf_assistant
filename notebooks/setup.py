@@ -184,20 +184,6 @@ risks_in_ai_system_components.write \
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC -- Create a new function that returns the total number of risks
-# MAGIC CREATE OR REPLACE FUNCTION risks_in_ai_system_components_count() RETURNS INT
-# MAGIC COMMENT 'Returns the total number of risks'
-# MAGIC     RETURN (SELECT COUNT(*) FROM risks_in_ai_system_components);
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC -- Select the total number of risks from the risks_in_ai_system_components_count function
-# MAGIC SELECT risks_in_ai_system_components_count() AS result
-
-# COMMAND ----------
-
-# MAGIC %sql
 # MAGIC -- Create a new function that returns a table of risks based on the provided risk_id_param
 # MAGIC CREATE OR REPLACE FUNCTION risks_in_ai_system_for_component(risk_id_param STRING) 
 # MAGIC RETURNS TABLE (
@@ -476,21 +462,6 @@ databricks_ai_mitigation_controls.write \
 # MAGIC %sql
 # MAGIC -- Select all columns from the databricks_ai_mitigation_controls function
 # MAGIC SELECT * FROM databricks_ai_mitigation_controls()
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC -- Create a new function databricks_ai_mitigation_controls_count
-# MAGIC -- The function returns an integer representing the total count of AI mitigation controls
-# MAGIC CREATE OR REPLACE FUNCTION databricks_ai_mitigation_controls_count() RETURNS INT
-# MAGIC COMMENT 'Returns the total count of ai mitigation controls'
-# MAGIC     RETURN (SELECT COUNT(*) FROM databricks_ai_mitigation_controls);
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC -- Select the total count of AI mitigation controls using the databricks_ai_mitigation_controls_count function
-# MAGIC SELECT databricks_ai_mitigation_controls_count() AS result
 
 # COMMAND ----------
 
