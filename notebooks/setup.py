@@ -48,10 +48,11 @@ os.makedirs(destination_folder, exist_ok=True)
 
 # Copy files from source to destination
 for filename in os.listdir(source_folder):
-    source_file = os.path.join(source_folder, filename)
-    destination_file = os.path.join(destination_folder, filename)
-    if os.path.isfile(source_file):
-        shutil.copy(source_file, destination_file)
+    if filename.endswith(".tsv"):
+        source_file = os.path.join(source_folder, filename)
+        destination_file = os.path.join(destination_folder, filename)
+        if os.path.isfile(source_file):
+            shutil.copy(source_file, destination_file)
 
 # COMMAND ----------
 

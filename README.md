@@ -1,4 +1,4 @@
-# Databricks AI Security Framework (DASF) AI assistant (DASF AI assistant)
+# Databricks AI Security Framework ([DASF](https://www.databricks.com/resources/whitepaper/databricks-ai-security-framework-dasf)) AI assistant (DASF AI assistant)
 
 > [!WARNING] 
 > This is **not** an officially endorsed Databricks product or solution; use it at your own risk! This is not a supported solution. 
@@ -24,3 +24,6 @@
 
 ## Examples
 
+| Question      | Answer | Screenshot    |
+| :---        |    :----:   |          ---: |
+| Who are you?  |  I am Genie, an AI-powered data analyst built by Databricks. I am here to help you analyze data related to the Databricks AI Security Framework (DASF) by answering your questions and executing SQL queries on the provided database tables. How can I assist you with the DASF data today?     | ![image](../docs/images/dasf_assistant_1.png) |
