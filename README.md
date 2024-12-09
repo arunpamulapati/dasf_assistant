@@ -26,4 +26,8 @@
 
 | Question      | Answer | Screenshot    |
 | :---        |    :----:   |          ---: |
-| Who are you?  |  I am Genie, an AI-powered data analyst built by Databricks. I am here to help you analyze data related to the Databricks AI Security Framework (DASF) by answering your questions and executing SQL queries on the provided database tables. How can I assist you with the DASF data today?     | ![image](../docs/images/dasf_assistant_1.png) |
+| Who are you?  |  I am Genie, an AI-powered data analyst built by Databricks. I am here to help you analyze data related to the Databricks AI Security Framework (DASF) by answering your questions and executing SQL queries on the provided database tables. How can I assist you with the DASF data today?     | ![image](./docs/images/dasf_assistant_1.png) |
+| What is DASF?  |  The Databricks AI Security Framework (DASF) is a comprehensive framework designed to address and manage the security risks associated with AI systems. It provides detailed documentation on various risks, mitigation controls, and security standards relevant to AI systems. The framework includes mappings to well-known security standards such as MITRE Atlas, MITRE ATT&CK, OWASP, ISO, NIST, and others, ensuring a robust approach to AI security.    | ![image](./docs/images/dasf_assistant_2.png) |
+| How many risks are there in the AI system according to DASF? List all risks in an AI system  |  Found a function that might match your question: `risks_in_ai_system_components` | ![image](./docs/images/dasf_assistant_3.png) |
+| What risks apply for a RAG deployment model? 
+|  You are retrieving the unique identifiers, names, and descriptions of risks associated with AI system components that apply to the RAG deployment model.    | ![image](./docs/images/dasf_assistant_4.png) |
