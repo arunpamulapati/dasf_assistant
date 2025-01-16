@@ -18,7 +18,6 @@ dbutils.widgets.dropdown(name="catalog", defaultValue=catalogs[0], choices=catal
 dbutils.widgets.text(name="schema", defaultValue="dasf", label="schema")
 dbutils.widgets.text(name="volume", defaultValue="dasf", label="volume")
 
-
 # COMMAND ----------
 
 # MAGIC %md
@@ -579,10 +578,18 @@ risks_and_controls_df.select("risk_id", "mitigation_control_id").write \
 # MAGIC )
 # MAGIC COMMENT 'Returns mitigation controls with control id, full control title, risk_id, description, and all the details of the control for a given risk id'
 # MAGIC RETURN
-# MAGIC SELECT conrols.* 
-# MAGIC FROM databricks_ai_mitigation_controls as conrols, risks_and_controls_mapping as risks_and_controls_mapping
+# MAGIC SELECT controls.* 
+# MAGIC FROM databricks_ai_mitigation_controls as controls, risks_and_controls_mapping as risks_and_controls_mapping
 # MAGIC WHERE risks_and_controls_mapping.risk_id = risk_id_param
-# MAGIC and risks_and_controls_mapping.mitigation_control_id = conrols.mitigation_control_id
+# MAGIC and risks_and_controls_mapping.mitigation_control_id = controls.mitigation_control_id
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC SELECT * 
+# MAGIC FROM databricks_ai_mitigation_controls as controls, risks_and_controls_mapping as risks_and_controls_mapping
+# MAGIC WHERE risks_and_controls_mapping.risk_id = 'Datasets 3.1'
+# MAGIC and risks_and_controls_mapping.mitigation_control_id = controls.mitigation_control_id 
 
 # COMMAND ----------
 
